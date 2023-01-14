@@ -1,9 +1,7 @@
 let valorHp;
-let monoOrTri = false;
-
 
 do{
-    valorHp = prompt('ingrese los HP de su motor')
+    valorHp = prompt('HP de su motor')
     if(!isNaN(valorHp) == false){
         alert('solo numeros porfavor')
     }
@@ -11,16 +9,16 @@ do{
 
 
 do{
-    monoOrTri = prompt('si es monofasico ingrese 1, si es trifasico 2')
-    if(!isNaN(monoOrTri) == false){
+    tipoDeMotor = prompt('Elegí una opción: \n1- monofasico. \n2 - trifasico. \nPresioná X para finalizar.')
+    if(!isNaN(tipoDeMotor) == false){
         alert('solo numeros porfavor')
     }
-    if(monoOrTri > 2){
+    if(tipoDeMotor > 2){
         alert('No mayor a 2')
     }else{
-        calc(valorHp, Number(monoOrTri))
+        calc(valorHp, Number(tipoDeMotor))
     }
-}while(Number(monoOrTri) > 2 || !isNaN(monoOrTri) == false)
+}while(Number(tipoDeMotor) > 2 || !isNaN(tipoDeMotor) == false)
 
 
 function calc(hp, mt){
