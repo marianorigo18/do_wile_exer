@@ -1,4 +1,5 @@
 let valorHp;
+let valorPotencia;
 
 let option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \nPresione X para finalizar.');
 
@@ -37,7 +38,20 @@ while(option != 'X' && option != 'x'){
                 }
             }
             break;
+        case '2':
+            do{
+                valorPotencia = prompt('ingrese la potencia')
+                if(!isNaN(valorPotencia) == false){
+                    alert('solo numeros porfavor')
+                }
+            }while(!isNaN(valorPotencia) == false)
+            alert(valorPotencia);
+     
 
+
+            break;
+        case '3':
+            alert('case 3')
         default:
             alert('Elegiste una opcion invalida');
             break;
