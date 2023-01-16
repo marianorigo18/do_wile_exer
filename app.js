@@ -1,6 +1,7 @@
 let valorHp;
 let valorPotencia;
 let valorTension;
+let valorCorriente;
 
 let option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \nPresione X para finalizar.');
 
@@ -79,7 +80,43 @@ while(option != 'X' && option != 'x'){
 
             break;
         case '3':
-            alert('case 3')
+            do{
+                valorCorriente = prompt('ingrese la corriente')
+                if(!isNaN(valorCorriente) == false){
+                    alert('solo numeros porfavor')
+                }
+            }while(!isNaN(valorCorriente) == false)
+            
+            do{
+                valorTension = prompt('Elegí la Tension: \n1 - 12v. \n2 - 24v. \n3 - 110v. \n4 - 220v. \n5 - 380v.')
+                if(!isNaN(valorTension) == false){
+                    alert('solo numeros porfavor')
+                }
+                if(valorTension > 5){
+                    alert('No mayor a 5')
+                }else{
+                    calculadoraAmperaje(Number(valorCorriente), Number(valorTension))
+                }
+            }while(Number(valorTension) > 5 || !isNaN(valorTension) == false)
+
+            function calculadoraAmperaje(corriente, tension){
+                if(tension == 1){
+                    alert(`el resultado de ${corriente}A multiplicado 12v es igual a = ${corriente * 12}W`)
+                }
+                if(tension == 2){
+                    alert(`el resultado de ${corriente}A multiplicado 24v es igual a = ${corriente * 24}W`)
+                }
+                if(tension == 3){
+                    alert(`el resultado de ${corriente}A multiplicado 110v es igual a = ${corriente * 110}W`)
+                }
+                if(tension == 4){
+                    alert(`el resultado de ${corriente}A multiplicado 220v es igual a = ${corriente * 220}W`)
+                }
+                if(tension == 5){
+                    alert(`el resultado de ${corriente}A multiplicado 380v es igual a = ${corriente * 380}W`)
+                }
+            }
+            break;
         default:
             alert('Elegiste una opcion invalida');
             break;
