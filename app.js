@@ -33,10 +33,10 @@ while(option != 'X' && option != 'x'){
             
             function calc(hp, mt){
                 if(mt == 1){
-                    alert(`El consumo de su motor monofasico es de ${hp * 6} Amperes`)
+                    alert(`El consumo de su motor monofasico es de ${Math.floor(hp * 6)} Amperes`)
                 }
                 if(mt == 2){
-                    alert(`El consumo de su motor trifasico es de ${hp * 1.5} Amperes`)
+                    alert(`El consumo de su motor trifasico es de ${Math.floor(hp * 1.5)} Amperes`)
                 }
             }
             break;
@@ -62,19 +62,19 @@ while(option != 'X' && option != 'x'){
      
             function calculadoraPotencia(potencia, tension){
                 if(tension == 1){
-                    alert(`el resultado de ${potencia}w dividido 12v es igual a = ${potencia / 12}A`)
+                    alert(`el resultado de ${potencia}w dividido 12v es igual a = ${Math.floor(potencia / 12)}A`)
                 }
                 if(tension == 2){
-                    alert(`el resultado de ${potencia}w dividido 24v es igual a = ${potencia / 24}A`)
+                    alert(`el resultado de ${potencia}w dividido 24v es igual a = ${Math.floor(potencia / 24)}A`)
                 }
                 if(tension == 3){
-                    alert(`el resultado de ${potencia}w dividido 110v es igual a = ${potencia / 110}A`)
+                    alert(`el resultado de ${potencia}w dividido 110v es igual a = ${Math.floor(potencia / 110)}A`)
                 }
                 if(tension == 4){
-                    alert(`el resultado de ${potencia}w dividido 220v es igual a = ${potencia / 220}A`)
+                    alert(`el resultado de ${potencia}w dividido 220v es igual a = ${Math.floor(potencia / 220)}A`)
                 }
                 if(tension == 5){
-                    alert(`el resultado de ${potencia}w dividido 380v es igual a = ${potencia / 380}A`)
+                    alert(`el resultado de ${potencia}w dividido 380v es igual a = ${Math.floor(potencia / 380)}A`)
                 }
             }
 
@@ -101,19 +101,19 @@ while(option != 'X' && option != 'x'){
 
             function calculadoraAmperaje(corriente, tension){
                 if(tension == 1){
-                    alert(`el resultado de ${corriente}A multiplicado 12v es igual a = ${corriente * 12}W`)
+                    alert(`el resultado de ${corriente}A multiplicado 12v es igual a = ${Math.floor(corriente * 12)}W`)
                 }
                 if(tension == 2){
-                    alert(`el resultado de ${corriente}A multiplicado 24v es igual a = ${corriente * 24}W`)
+                    alert(`el resultado de ${corriente}A multiplicado 24v es igual a = ${Math.floor(corriente * 24)}W`)
                 }
                 if(tension == 3){
-                    alert(`el resultado de ${corriente}A multiplicado 110v es igual a = ${corriente * 110}W`)
+                    alert(`el resultado de ${corriente}A multiplicado 110v es igual a = ${Math.floor(corriente * 110)}W`)
                 }
                 if(tension == 4){
-                    alert(`el resultado de ${corriente}A multiplicado 220v es igual a = ${corriente * 220}W`)
+                    alert(`el resultado de ${corriente}A multiplicado 220v es igual a = ${Math.floor(corriente * 220)}W`)
                 }
                 if(tension == 5){
-                    alert(`el resultado de ${corriente}A multiplicado 380v es igual a = ${corriente * 380}W`)
+                    alert(`el resultado de ${corriente}A multiplicado 380v es igual a = ${Math.floor(corriente * 380)}W`)
                 }
             }
             break;
