@@ -2,8 +2,9 @@ let valorHp;
 let valorPotencia;
 let valorTension;
 let valorCorriente;
+let frigorias;
 
-let option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \nPresione X para finalizar.');
+let option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \n4- Frigorias a Corriente \nPresione X para finalizar.');
 
 
 while(option != 'X' && option != 'x'){
@@ -117,10 +118,48 @@ while(option != 'X' && option != 'x'){
                 }
             }
             break;
+            case '4':
+                do{
+                    frigorias = prompt('ingrese las frigorias')
+                    if(!isNaN(frigorias) == false){
+                        alert('solo numeros porfavor')
+                    }
+                }while(!isNaN(frigorias) == false)
+
+                do{
+                    valorTension = prompt('Elegí la Tension: \n1 - 12v. \n2 - 24v. \n3 - 110v. \n4 - 220v. \n5 - 380v.')
+                    if(!isNaN(valorTension) == false){
+                        alert('solo numeros porfavor')
+                    }
+                    if(valorTension > 5){
+                        alert('No mayor a 5')
+                    }else{
+                        calculadoraFrigorias(Number(frigorias), Number(valorTension))
+                    }
+                }while(Number(valorTension) > 5 || !isNaN(valorTension) == false)
+
+                function calculadoraFrigorias(frigorias, tension){
+                    /*if(tension == 1){
+                        alert(`el resultado de ${frigorias}A multiplicado 12v es igual a = ${Math.floor(frigorias * 12)}W`)
+                    }
+                    if(tension == 2){
+                        alert(`el resultado de ${frigorias}A multiplicado 24v es igual a = ${Math.floor(frigorias * 24)}W`)
+                    }
+                    if(tension == 3){
+                        alert(`el resultado de ${frigorias}A multiplicado 110v es igual a = ${Math.floor(frigorias * 110)}W`)
+                    }*/
+                    if(tension == 4){
+                        alert(`el resultado de ${frigorias} frigorias dividido 860 dividido 220 dividido 2 es igual a = ${Math.floor(frigorias / 0.86 / 220 / 2)}A`)
+                    }
+                  /*  if(tension == 5){
+                        alert(`el resultado de ${frigorias}A multiplicado 380v es igual a = ${Math.floor(frigorias * 380)}W`)
+                    }*/
+                }
+                break;
         default:
             alert('Elegiste una opcion invalida');
             break;
         }
-        option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \nPresione X para finalizar.');
+        option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \n4- Frigorias a Corriente \nPresione X para finalizar.');
 }
 
