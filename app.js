@@ -158,7 +158,7 @@ while(option != 'X' && option != 'x'){
                 break;
         default:
             alert('Elegiste una opcion invalida');
-            break;
+            break; 
         }
         option = prompt('Elige una opcion: \n1- Corriente nominal. \n2- Potencia. \n3- Amperaje. \n4- Frigorias a Corriente \nPresione X para finalizar.');
 }
